@@ -30,11 +30,12 @@ under the License.
   </parent>
 
   <artifactId>maven-checkstyle-plugin</artifactId>
-  <version>2.14-SNAPSHOT</version>
+  <!-- Hack to an older version that works since as of Feb 2, 2015, the 'released' 2.14-SNAPSHOT is broken for java 8 -->
+  <version>2.14-kik-hack</version>
   <packaging>maven-plugin</packaging>
 
   <name>Apache Maven Checkstyle Plugin</name>
-  <description>Generates a report on violations of code style and optionally fails the build if violations are detected.</description>
+  <description>Hack to an older version that works</description>
   <inceptionYear>2005</inceptionYear>
 
   <prerequisites>
@@ -292,7 +293,7 @@ under the License.
             </goals>
           </execution>
         </executions>
-      </plugin>      
+      </plugin>
     </plugins>
   </build>
 
