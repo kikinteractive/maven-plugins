@@ -47,10 +47,11 @@ under the License.
   </ciManagement>
 
   <distributionManagement>
-    <site><!-- to be copied in every plugin pom, since inheritance adds unwanted artifactId -->
-      <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</url>
-    </site>
+    <repository>
+      <id>nexus</id>
+      <name>releases</name>
+      <url>http://server-nexus.kik.com/nexus/content/repositories/releases/</url>
+    </repository>
   </distributionManagement>
 
   <properties>
@@ -189,7 +190,7 @@ under the License.
     </plugins>
   </reporting>
 
-  <profiles>
+    <profiles>
     <profile>
       <id>quality-checks</id>
       <activation>
